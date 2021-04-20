@@ -125,6 +125,8 @@ render();
 footers();
 
 
+
+
 //let seattle ={
     //name : 'seattle',
    // min : 23 ,
