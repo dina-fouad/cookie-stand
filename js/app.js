@@ -27,6 +27,7 @@ Cookie.prototype.gitCustNumber = function () {
 
 const parentElement = document.getElementById('SalmonCookies');
 let datatable = document.getElementById('Datatable');
+const catForm = document.getElementById('newStore');
 
 
 Cookie.prototype.render = function () {
@@ -124,8 +125,24 @@ heading();
 render();
 footers();
 
+newStore.addEventListenner('submit',eventButton)
+
+function eventButton(event){
+  event.preventDefault();
+  
+  const storeName= event.target.storeName.value;
+  const min= event.target.min.value;
+  const mix= event.target.mix.value;
+  const average = event.target.average.value;
 
 
+let newCities =new Cookie (storeName,min,mix,average)
+newCities.render();
+newCities.gitCustNumbe();
+newCities.reset();
+footers();
+heading();
+}
 
 //let seattle ={
     //name : 'seattle',
