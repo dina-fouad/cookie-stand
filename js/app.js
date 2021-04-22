@@ -137,10 +137,10 @@ function submitter(event){
 
 
 let newCities =new Cookie (storeName,min,mix,average)
-let rowCount = datatable.rows.length;
-datatable.deleteRow(rowCount - 1);
-newCities.render();
+let rowCount = Datatable.rows.length;
+Datatable.deleteRow(rowCount - 1);
 newCities.gitCustNumber();
+newCities.render();
 newStore.reset();
 
 footers();
