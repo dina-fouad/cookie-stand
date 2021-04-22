@@ -1,3 +1,11 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap');
+
+body{
+    background-color: cornsilk;
+}
 table{
     border-collapse: collapse;
     text-align: center;
@@ -5,10 +13,42 @@ table{
 
 td, th ,tr {
     border: 1px solid rgb(179, 143, 143);
-    padding: 5px 10px;
+   
   }
 
   section h2{
       background-color: rgb(47, 114, 114);
       color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+
+      font-size:x-large;
   }
+ header h1{
+     color: rgb(127, 93, 158);
+     font-family: 'Zilla Slab Highlight', cursive;
+     text-align: center;
+     margin-bottom: 80px;
+    
+ }
+ footer{
+     color: rgb(127, 93, 158);
+     font-family: 'Zilla Slab Highlight', cursive;
+ }
+ ul *{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     color: cornflowerblue;
+ }
+
+ header a{
+     text-decoration: none;
+     display: inline;
+     padding: 10px 60px;
+     color: rgb(127, 93, 158);
+     font-family: 'Zilla Slab Highlight', cursive;
+     
+ }
+ header img{
+     margin: 40px 50px;
+    
+ }
