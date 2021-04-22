@@ -40,7 +40,7 @@ Cookie.prototype.render = function () {
   tr.appendChild(td);
   td.textContent = this.name;
 
-  for(let i = 0; i < hours.length; i++) {
+  for(let i = 0; i <hours.length; i++) {
     let tContent = document.createElement('td');
     tr.appendChild(tContent);
     tContent.textContent = this.cookiesPerHour[i];
@@ -125,9 +125,9 @@ heading();
 render();
 footers();
 
-newStore.addEventListenner('submit',eventButton)
+newStore.addEventListener('submit',submitter)
 
-function eventButton(event){
+function submitter(event){
   event.preventDefault();
   
   const storeName= event.target.storeName.value;
@@ -137,238 +137,12 @@ function eventButton(event){
 
 
 let newCities =new Cookie (storeName,min,mix,average)
+let rowCount = datatable.rows.length;
+datatable.deleteRow(rowCount - 1);
 newCities.render();
-newCities.gitCustNumbe();
-newCities.reset();
+newCities.gitCustNumber();
+newStore.reset();
+
 footers();
-heading();
+
 }
-
-//let seattle ={
-    //name : 'seattle',
-   // min : 23 ,
-  //  max:63 ,
-  //  average : 6.3 ,
-  //  hours:['6m','7am','8am','9am','10am','11am','12pm','1pm','2pm','3mp','4pm','5mp','6pm','7pm'],
-  //  customerNumber : function(){
-   //     return Math.ceil(getRandomNumber(this.min,this.max)*this.average)
-   // },
-
-   // render : function(){
-   //     let parentElement =document.getElementById('salmon-cookies');
-
-     //   let articleElement=document.createElement('article');
-     //   parentElement.appendChild(articleElement);
-
-      //  let h2Element=document.createElement('h2');
-      //  h2Element.textContent=this.name;
-      //  articleElement.appendChild(h2Element)
-
-       // let ulElement=document.createElement('ul');
-       // h2Element.appendChild(ulElement);
-       // let total =0;
-      //  for(let i=0;i<this.hours.length;i++){
-       //     let liElement=document.createElement('li');
-       //     let cooki=this.customerNumber();
-         //   liElement.textContent=this.hours[i]+': '+cooki+' cookies';
-         //   total=total+cooki;
-         //   ulElement.appendChild(liElement)
-         //   if(i===13){
-          //      let liElement=document.createElement('li');
-           //     liElement.textContent='total: '+total+'cookies';
-            //    ulElement.appendChild(liElement);
-           // }
-       // }
-
-
-  //  }
-
-
-
-
-
-//}
-
-//let tokyo ={
-  //  name : 'tokyo',
-    //min : 3 ,
-    //max:24 ,
-    //average : 1.2 ,
-    //hours:['6m','7am','8am','9am','10am','11am','12pm','1pm','2pm','3mp','4pm','5mp','6pm','7pm'],
-    //customerNumber : function(){
-      //  return Math.ceil(getRandomNumber(this.min,this.max)*this.average)
-    //},
-
-    //render : function(){
-      //  let parentElement =document.getElementById('salmon-cookies');
-
-        //let articleElement=document.createElement('article');
-        //parentElement.appendChild(articleElement);
-
-        //let h2Element=document.createElement('h2');
-        //h2Element.textContent=this.name;
-        //articleElement.appendChild(h2Element)
-
-        //let ulElement=document.createElement('ul');
-        //h2Element.appendChild(ulElement);
-        //let total =0;
-        //for(let i=0;i<this.hours.length;i++){
-          //  let liElement=document.createElement('li');
-            //let cooki=this.customerNumber();
-            //liElement.textContent=this.hours[i]+': '+cooki+' cookies';
-            //total=total+cooki;
-            //ulElement.appendChild(liElement)
-            //if(i===13){
-              //  let liElement=document.createElement('li');
-               // liElement.textContent='total: '+total+'cookies';
-               // ulElement.appendChild(liElement);
-            //}
-        //}
-
-
-    //}
-
-
-
-
-
-//}
-
-
-//let dubai ={
-  //  name : 'dubai',
-    //min : 11,
-    //max:38 ,
-    //average : 3.7 ,
-    //hours:['6m','7am','8am','9am','10am','11am','12pm','1pm','2pm','3mp','4pm','5mp','6pm','7pm'],
-    //customerNumber : function(){
-      //  return Math.ceil(getRandomNumber(this.min,this.max)*this.average)
-    //},
-
-    //render : function(){
-      //  let parentElement =document.getElementById('salmon-cookies');
-
-        //let articleElement=document.createElement('article');
-        //parentElement.appendChild(articleElement);
-
-        //let h2Element=document.createElement('h2');
-        //h2Element.textContent=this.name;
-        //articleElement.appendChild(h2Element)
-
-        //let ulElement=document.createElement('ul');
-        //h2Element.appendChild(ulElement);
-        //let total =0;
-        //for(let i=0;i<this.hours.length;i++){
-          //  let liElement=document.createElement('li');
-            //let cooki=this.customerNumber();
-            //liElement.textContent=this.hours[i]+': '+cooki+' cookies';
-            //total=total+cooki;
-            //ulElement.appendChild(liElement)
-            //if(i===13){
-               // let liElement=document.createElement('li');
-                //liElement.textContent='total: '+total+'cookies';
-                //ulElement.appendChild(liElement);
-            //}
-        //}
-
-
-    //}
-
-
-
-
-
-//}
-
-
-//let paris ={
-  //  name : 'paris',
-    //min : 20 ,
-    //max:38 ,
-    //average : 2.3 ,
-   // hours:['6m','7am','8am','9am','10am','11am','12pm','1pm','2pm','3mp','4pm','5mp','6pm','7pm'],
-    //customerNumber : function(){
-      //  return Math.ceil(getRandomNumber(this.min,this.max)*this.average)
-    //},
-
-    //render : function(){
-      //  let parentElement =document.getElementById('salmon-cookies');
-
-       // let articleElement=document.createElement('article');
-        //parentElement.appendChild(articleElement);
-
-        //let h2Element=document.createElement('h2');
-        //h2Element.textContent=this.name;
-        //articleElement.appendChild(h2Element)
-
-        //let ulElement=document.createElement('ul');
-        //h2Element.appendChild(ulElement);
-        //let total =0;
-        //for(let i=0;i<this.hours.length;i++){
-          //  let liElement=document.createElement('li');
-            //let cooki=this.customerNumber();
-            //liElement.textContent=this.hours[i]+': '+cooki+' cookies';
-            //total=total+cooki;
-            //ulElement.appendChild(liElement)
-            //if(i===13){
-              //  let liElement=document.createElement('li');
-                //liElement.textContent='total: '+total+'cookies';
-                //ulElement.appendChild(liElement);
-            //}
-        //}
-
-
-    //}
-
-
-
-
-
-//}
-
-//let lima ={
-  //  name : 'lima',
-    //min : 2 ,
-    //max:16 ,
-    //average : 4.6 ,
-    //hours:['6m','7am','8am','9am','10am','11am','12pm','1pm','2pm','3mp','4pm','5mp','6pm','7pm'],
-    //customerNumber : function(){
-      //  return Math.ceil(getRandomNumber(this.min,this.max)*this.average)
-    //},
-
-    //render : function(){
-      //  let parentElement =document.getElementById('salmon-cookies');
-
-        //let articleElement=document.createElement('article');
-        //parentElement.appendChild(articleElement);
-
-        //let h2Element=document.createElement('h2');
-        //h2Element.textContent=this.name;
-        //articleElement.appendChild(h2Element)
-
-        //let ulElement=document.createElement('ul');
-        //h2Element.appendChild(ulElement);
-        //let total =0;
-        //for(let i=0;i<this.hours.length;i++){
-          //  let liElement=document.createElement('li');
-            //let cooki=this.customerNumber();
-            //liElement.textContent=this.hours[i]+': '+cooki+' cookies';
-           // total=total+cooki;
-            //ulElement.appendChild(liElement)
-            //if(i===13){
-              //  let liElement=document.createElement('li');
-                //liElement.textContent='total: '+total+'cookies';
-                //ulElement.appendChild(liElement);
-            //}
-        //}
-
-
-    //}
-
-
-
-
-
-//}
-
-
